@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic-Tac-Toe AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Game Header -->
+        <div class="header">
+            <h1>🎮 Tic-Tac-Toe</h1>
+            <p>Play against Minimax AI</p>
+        </div>
+
+        <!-- Game Status -->
+        <div id="status" class="status">
+            Your turn — You are X
+        </div>
+
+        <!-- Game Board -->
+        <div id="board" class="board">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+
+        </div>
+
+        <!-- Restart Button -->
+        <button id="restart-button">
+            🔄 Restart Game
+        </button>
+
+        <!-- Information -->
+        <div class="info">
+
+            <div>
+                <span class="player-symbol">X</span>
+                You
+            </div>
+
+            <div>
+                <span class="ai-symbol">O</span>
+                AI
+            </div>
+
+        </div>
+
+        <p class="ai-info">
+            🤖 The computer uses the Minimax algorithm
+            to choose its moves.
+        </p>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
